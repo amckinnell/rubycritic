@@ -15,7 +15,7 @@ module RubyCritic
       def run
         @analysed_modules.each do |analysed_module|
           analysed_module.methods_count = MethodsCounter.new(analysed_module).count
-          analysed_module.name = ModulesLocator.new(analysed_module).first_name
+          analysed_module.name = ModulesLocator.new(analysed_module).name
           print green '.'
         end
         puts ''
