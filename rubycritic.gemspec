@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'ruby_parser', '~> 3.8'
   spec.add_runtime_dependency 'simplecov', '>= 0.17.0'
   spec.add_runtime_dependency 'tty-which', '~> 0.4.0'
-  spec.add_runtime_dependency 'virtus', '~> 1.0'
+  spec.add_runtime_dependency 'virtus', '>= 1.0', '<= 2.0'
 
   spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'aruba', '~> 0.12', '>= 0.12.0'
