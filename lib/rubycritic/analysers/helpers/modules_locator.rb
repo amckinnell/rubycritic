@@ -12,12 +12,17 @@ module RubyCritic
       names.first
     end
 
-    def names
-      names = node.module_names
-      if names.empty?
-        name_from_path
+    def names # ARM (2022-10-29): Hacking a special case for top-level class nodes.
+      if node.type == :class
+        # ARM (2022-10-29): Assumes no namespace nesting. Obviously have to fix this.
+        [node.children.first.children.last]
       else
-        names
+        names = node.module_names
+        if names.empty?
+          name_from_path
+        else
+          names
+        end
       end
     end
 
