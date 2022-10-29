@@ -71,6 +71,10 @@ module RubyCritic
       def module_names
         []
       end
+
+      def type
+        'empty_node'
+      end
     end
   end
 end
